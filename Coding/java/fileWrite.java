@@ -1,5 +1,6 @@
 // Demonstrate FileOutputStream.
 // This program uses the traditional approach to closing a file.
+/*
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -43,3 +44,4 @@ class FileOutputStreamDemo {
     
     }
 }
+*/

@@ -1,0 +1,5 @@
+class demoQueue{
+    int a;
+    int b;
+    public void print("in print function");
+}
