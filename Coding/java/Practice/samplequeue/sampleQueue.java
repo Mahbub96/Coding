@@ -1,5 +1,4 @@
 
-package samplequeue;
 class QUEUE{
     private int size;
     private int arr[];
@@ -37,6 +36,7 @@ class QUEUE{
             System.out.println("Queue Overflow");
             return;
         }
+        
         arr[rare++] = x;
         temp %= 10;
         temp++;
@@ -61,13 +61,25 @@ class QUEUE{
 
         front %= 10;
         temp--;
-        return arr[front];
+        return arr[front] < 0 ? Math.abs(arr[front]) : arr[front];
     }
 }
 
-public class sampleQueue {
+class sampleQueue {
     public static void main(String[] args) {
         
-        new QUEUE(10);
+        QUEUE q = new QUEUE(10);
+        q.push(5);
+        q.push(-3);
+        q.push(-6);
+        q.push(5);
+        q.push(-7);
+        
+        System.out.println(q.pop());
+        System.out.println(q.pop());
+        System.out.println(q.pop());
+        System.out.println(q.pop());
+        System.out.println(q.pop());
+
     }
 }

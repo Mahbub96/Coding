@@ -22,7 +22,7 @@ class Stack{
     }
 
     void push(int val){
-        if((tos + 1 ) == size){
+        if((tos + 1) == size){
             System.out.println("Stack overflow!");
             return;
         }
@@ -41,7 +41,14 @@ class Stack{
 
 class StackDemo{
     public static void main(String[] args) {
-             
+        Stack s = new Stack();
+         for (int i = 0; i < 11; i++) {
+            s.push(i);
+         }
+
+         for (int i = 0; i < 11; i++) {
+             System.out.println(s.pop());
+         }
         
     }
 }
