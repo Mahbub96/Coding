@@ -1,19 +1,49 @@
+
+package javaapplication5;
+
 import java.util.Scanner;
 
-class HelloWorld {
+/**
+ *
+ * @author student
+ */
+public class JavaApplication5 {
+
+ 
     public static void main(String[] args) {
-        Scanner op = new Scanner(System.in);
-        
-        System.out.print("Enter large number : ");
-        int value = op.nextInt();
-        System.out.print("Enter large number : ");
-        int n = op.nextInt();
-        
-        String s = String.valueOf(value);
-        try{
-            System.out.println(s.charAt(n-1));
-        }catch (Exception e){
-            System.out.println(e);
+        Scanner scan = new Scanner(System.in);
+
+        System.out.print("Enter Large Number");
+        int value = scan.nextInt();
+        int temp = value;
+
+        System.out.print("Enter Target Index ");
+        int n = scan.nextInt();
+        int len = 0;
+
+//        to find the length of an array 
+        while (temp > 0) {
+            temp /= 10;
+            len++;
         }
+        
+        if(n >= len){
+            System.out.println("Index number is out of bound !");
+            
+        }
+        else{
+            int targetInd = len - n;
+
+            while (targetInd-- > 0) {
+           	 value /= 10;
+            }
+
+            System.out.println(value % 10);
+        }
+
+
+        
+
     }
+
 }
