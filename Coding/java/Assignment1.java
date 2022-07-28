@@ -1,10 +1,19 @@
+import java.util.Scanner;
+
 class HelloWorld {
     public static void main(String[] args) {
-        int value = 123456;
-        int n = 2;
+        Scanner op = new Scanner(System.in);
+        
+        System.out.print("Enter large number : ");
+        int value = op.nextInt();
+        System.out.print("Enter large number : ");
+        int n = op.nextInt();
         
         String s = String.valueOf(value);
-        System.out.println(s.charAt(n));
-        
+        try{
+            System.out.println(s.charAt(n-1));
+        }catch (Exception e){
+            System.out.println(e);
+        }
     }
 }
